@@ -1,0 +1,458 @@
+@import "../../styles/var";
+
+.page {
+    position: relative;
+    padding-bottom: 130px;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 809px;
+        background-image: url("../../assets/img/bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1456px;
+        background-image: url('../../assets/img/footer_bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        @media(max-width: $md1+px) {
+            height: 1100px;
+        }
+        @media(max-width: $md3+px) {
+            display: none;
+        }
+    }
+    img {
+        pointer-events: none;
+    }
+
+    .header {
+        position: relative;
+        z-index: 10;
+        padding: 37px 0;
+        @media (max-width: $md6+px) {
+            padding: 24px 0;
+        }
+        &Wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 93px;
+            }
+        }
+        &Content {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 70px;
+            @media (max-width: $md3+px) {
+                gap: 50px;
+            }
+            @media (max-width: $md5+px) {
+                gap: 40px;
+            }
+            .headerItem {
+                font-family: $gilroy;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #fff;
+                @media (max-width: 700px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .salesperson {
+        position: relative;
+        z-index: 3;
+        padding-top: 150px;
+        @media(max-width: $md1+px) {
+            padding-top: 100px;
+        }
+        @media(max-width: $md3+px) {
+            padding-top: 60px;
+        }
+        @media(max-width: $md6+px) {
+            padding-top: 40px;
+        }
+        .title,
+        text,
+        .subtitle,
+        .annotation,
+        .listTitle,
+        .slspBtn,
+        ul {
+            position: relative;
+            z-index: 4;
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            &Text_01 {
+                position: relative;
+                &_open {
+                    position: absolute;
+                    left: 405px;
+                    top: -25px;
+                    color: #FFF;
+                    font-family: 'Caveat';
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                    @media(max-width: $md1+px) {
+                        font-size: 30px;
+                        left: 290px;
+                    }
+                    @media(max-width: $md6+px) {
+                        font-size: 20px;
+                        left: 227px;
+                        top: -15px;
+                    }
+                }
+            }
+            &Text_02 {
+                color: #fff;
+                margin-top: -18px;
+                @media(max-width: $md1+px) {
+                    margin-top: -15px;
+                }
+                @media(max-width: $md6+px) {
+                    margin-top: -6px;
+                }
+            }
+        }
+        .text {
+            max-width: 700px;
+            margin: 30px 0 15px 0;
+            @media (max-width: $md1+px) {
+                max-width: 630px;
+            }
+            @media (max-width: $md6+px) {
+                margin: 20px 0 10px 0;
+            }
+        }
+        .subtitle {
+            font-weight: 700;
+        }
+        .slspBtn {
+            margin: 50px 0;
+        }
+        .annotation {
+            cursor: help;
+            margin: 100px 0 170px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 20px;
+            width: 530px;
+            background: rgba(255, 253, 253, 0.6);
+            box-shadow: 0px 3.2475px 6.495px rgba(51, 48, 48, 0.25);
+            backdrop-filter: blur(3.41463px);
+            border-radius: 10.9268px;
+            @media(max-width: $md1+px) {
+                margin: 80px 0 130px 0;
+            }
+            @media (max-width: $md4+px) {
+                margin: 30px 0 50px 0;
+            }
+            @media (max-width: $md5+px) {
+                width: 100%;
+            }
+            @media (max-width: $md6+px) {
+                align-items: flex-start;
+            }
+            .annotationImg {
+                width: 36px;
+            }
+            .annotationText {
+                font-family: $gilroy;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+        }
+        .image_01 {
+            position: absolute;
+            z-index: 1;
+            top: 72px;
+            right: -800px;
+            left: 0;
+            margin: 0 auto;
+            width: 799px;
+            @media (max-width: $md1+px) {
+                width: 600px;
+                top: 40px;
+                right: -670px;
+            }
+            @media (max-width: $md2+px) {
+                width: 500px;
+                top: 200px;
+                right: -640px;
+            }
+            @media (max-width: $md3+px) {
+                top: 240px;
+                width: 400px;
+                right: -550px;
+            }
+            @media (max-width: $md4+px) {
+                display: flex;
+                position: relative;
+                top: unset;
+                left: unset;
+                right: unset;
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+        .dollars {
+            position: absolute;
+            z-index: 2;
+            right: 100px;
+            top: 60px;
+            width: 802px;
+            @media (max-width: $md1+px) {
+                width: 600px;
+                right: 70px;
+            }
+            @media (max-width: $md2+px) {
+                width: 500px;
+            }
+            @media (max-width: $md3+px) {
+                top: unset;
+                bottom: 100px;
+                width: 400px;
+                right: 40px;
+            }
+            @media (max-width: $md4+px) {
+                display: none;
+            }
+        }
+    }
+
+    .undbWrap {
+        position: relative;
+        .image_02 {
+            mix-blend-mode: hard-light;
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            top: -140px;
+            width: 1017px;
+            @media(max-width: $md1+px) {
+                width: 800px;
+                top: -140px;
+            }
+            @media(max-width: $md3+px) {
+                width: 600px;
+                top: 100px;
+            }
+            @media(max-width: $md4+px) {
+                width: 500px;
+                top: 150px;
+            }
+            @media(max-width: $md6+px) {
+                width: 350px;
+                top: 300px;
+            }
+        }
+        .undb {
+            position: relative;
+            z-index: 4;
+            justify-content: space-between;
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 700px);
+            @media(max-width: $md1+px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 60px;
+            }
+            @media(max-width: $md3+px) {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+            }
+            .undbList {
+                .listTitle {
+                    color: #EF6A6A!important;
+                    @media (max-width: $md4+px) {
+                        margin-top: 80px;
+                    }
+                }
+                ul {
+                    margin: 30px 0 50px 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-left: 30px;
+                    max-width: 800px;
+                    @media (max-width: $md1+px) {
+                        max-width: 600px;
+                    }
+                    @media(max-width: $md3+px) {
+                        margin-bottom: 0;
+                    }
+                    @media (max-width: $md6+px) {
+                        margin: 20px 0 0 0;
+                        padding-left: 23px;
+                    }
+                    li {
+                        list-style-type: disc;
+                        list-style-position: outside;
+                    }
+                }
+                .pcBtn1 {
+                    display: none;
+                }
+            }
+
+            .requirements {
+                position: relative;
+                z-index: 3;
+                .container {
+                    position: relative;
+                    
+                    .content {
+                        position: relative;
+                        z-index: 3;
+                        margin-left: auto;
+                        @media (max-width: $md3+px) {
+                            margin-left: 0;
+                            width: 100%;
+                        }
+                        .title {
+                        }
+                        ul {
+                            margin: 30px 0 50px 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            padding-left: 30px;
+                            @media (max-width: $md6+px) {
+                                margin: 20px 0 50px 0;
+                                padding-left: 23px;
+                            }
+                            li {
+                                list-style-type: disc;
+                                list-style-position: outside;
+                            }
+                        }
+                        .btn {
+                            display: none;
+                            @media(max-width: $md3+px) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .whoWeAre {
+        position: relative;
+        z-index: 3;
+        margin-top: 120px;
+        @media (max-width: $md6+px) {
+            margin-top: 80px;
+        }
+        .container {
+            position: relative;
+        }
+        .hwaContent {
+            width: 700px;
+            margin-left: auto;
+            @media(max-width: $md3+px) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        .title {
+            position: relative;
+            z-index: 3;
+        }
+        .text {
+            position: relative;
+            z-index: 3;
+            margin: 30px 0 50px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 700px;
+            @media (max-width: $md1+px) {
+                max-width: 630px;
+            }
+            @media (max-width: $md3+px) {
+                max-width: 100%;
+            }
+            @media (max-width: $md6+px) {
+                margin: 20px 0 50px 0;
+            }
+        }
+        .image_03 {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            width: 688px;
+            top: 60px;
+            @media (max-width: $md1+px) {
+                width: 500px;
+            }
+            @media (max-width: $md2+px) {
+                width: 450px;
+            }
+            @media (max-width: $md3+px) {
+                width: 100%;
+                max-width: 600px;
+                top: unset;
+                left: unset;
+                position: relative;
+                display: flex;
+                margin: 60px auto 0 auto;
+            }
+            @media (max-width: $md6+px) {
+            }
+        }
+        .btn {
+            position: relative;
+            z-index: 3;
+            @media (max-width: $md4+px) {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.pcBtn1 {
+    // @media (max-width: $md3+px) {
+    //     display: none;
+    // }
+}
+.mobBtn1 {
+    display: none;
+    @media (max-width: $md3+px) {
+        display: block;
+        margin-bottom: 30px;
+    }
+}
